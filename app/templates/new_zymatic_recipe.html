@@ -4,6 +4,15 @@
 <script src="/static/js/base_recipe.js"></script>
 <script src="/static/js/zymatic_recipe.js"></script>
 <script>var tables = {};</script>
+<script>
+  $(document).ready(function() {
+    $('#b_clean_recipe').on('click', function() {
+      // When clicked, toggle the 'active' class on the clicked element
+      $(this).toggleClass('fa-check-square fa-soap');
+    });
+  });
+
+</script>    
 {% include "units_selector.html" %}
 <form id="f_new_recipe" class="needs-validation">
   <div class="form-row">
@@ -14,6 +23,14 @@
         support a limited character set.</div>
     </div>
     <div class="form-group col-sm">
+      {% set clean_icon = 'fa-sync' if recipe.is_archived else 'fa-check-square' %}
+      
+      <button class="btn btn-sm float-right mr-5" type="button" id="b_clean_recipe"
+                    data-toggle="tooltip" data-placement="bottom" title="Clean Recipe">
+        <i class="fas fa-soap"></i>
+      </button>
+      
+      
       <button class="btn btn-sm btn-success float-right mr-3" type="button" id="b_new_recipe">
         <i class="far fa-save fa-lg"></i>
       </button>
