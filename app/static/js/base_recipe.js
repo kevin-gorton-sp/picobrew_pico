@@ -26,6 +26,7 @@ function toggle_sync_recipe(recipe_id, recipe_type) {
     });
 }
 
+// Update Sync
 function toggle_clean_recipe() {
     $clean_btn = $(`#b_clean_recipe`);
     $clean_btn.toggleClass("btn-secondary btn-success");
