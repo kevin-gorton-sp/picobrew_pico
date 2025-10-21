@@ -26,6 +26,16 @@ function toggle_sync_recipe(recipe_id, recipe_type) {
     });
 }
 
+function toggle_clean_recipe() {
+    $clean_btn = $(`#b_clean_recipe`);
+    $clean_btn.toggleClass("btn-secondary btn-success");
+    const tooltip = $clean_btn.attr('title');
+    if (tooltip.indexOf("Brew") != -1) {
+        $clean_btn.attr('title', tooltip.replace("Brew", "Clean"))
+    } else {
+        $clean_btn.attr('title', tooltip.replace("Clean", "Brew"))
+    }
+}
 
 
 // tabulator utility functions for recipe table functionalities
