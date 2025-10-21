@@ -128,8 +128,12 @@ $(document).ready(function () {
         if (!validate(form)) {
             return false;
         }
-
+        var clean = document.getElementById('b_clean_recipe').title
+        
         var recipe = {}
+        if (clean == 'Clean Recipe') {
+            recipe.clean = true
+        }
         recipe.id = ''
         recipe.name = form.elements['recipe_name'].value;
         recipe.notes = form.elements['notes'].value;
