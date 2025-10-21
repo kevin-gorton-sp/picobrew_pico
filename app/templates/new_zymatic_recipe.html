@@ -11,8 +11,7 @@
       $(this).toggleClass('fa-check-square fa-soap');
     });
   });
-
-</script>    
+</script> 
 {% include "units_selector.html" %}
 <form id="f_new_recipe" class="needs-validation">
   <div class="form-row">
@@ -23,14 +22,9 @@
         support a limited character set.</div>
     </div>
     <div class="form-group col-sm">
-      {% set clean_icon = 'fa-sync' if recipe.is_archived else 'fa-check-square' %}
-      
-      <button class="btn btn-sm float-right mr-5" type="button" id="b_clean_recipe"
-                    data-toggle="tooltip" data-placement="bottom" title="Clean Recipe">
+      <button class="btn btn-sm btn-success float-right mr-3" type="button" id="b_clean_recipe">
         <i class="fas fa-soap"></i>
       </button>
-      
-      
       <button class="btn btn-sm btn-success float-right mr-3" type="button" id="b_new_recipe">
         <i class="far fa-save fa-lg"></i>
       </button>
