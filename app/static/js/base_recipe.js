@@ -26,6 +26,8 @@ function toggle_sync_recipe(recipe_id, recipe_type) {
     });
 }
 
+
+
 // tabulator utility functions for recipe table functionalities
 var isDataLoading = true;
 var tables_loaded = [];
